@@ -1,0 +1,29 @@
+{
+  "name": "inversify-koa-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bingoYB/inversify-koa-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bingoYB/inversify-koa-template/issues"
+  },
+  "homepage": "https://github.com/bingoYB/inversify-koa-template#readme",
+  "dependencies": {
+    "@types/koa-router": "^7.4.1",
+    "inversify": "^5.0.5",
+    "inversify-binding-decorators": "^4.0.0",
+    "inversify-koa-utils": "^1.0.0",
+    "koa": "^2.13.1",
+    "koa-router": "^10.0.0",
+    "reflect-metadata": "^0.1.13"
+  }
+}
