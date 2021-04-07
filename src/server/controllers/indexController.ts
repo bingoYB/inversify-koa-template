@@ -17,6 +17,20 @@ export default class IndexController implements interfaces.Controller {
   constructor(@inject(TAGS.IndexService) indexService:IndexService) {
     this.indexService = indexService
   }
+
+/**
+ * @api {Get} /get index
+ * @apiGroup User
+ * @apiParam {number} id 索引ID
+ * @apiParamExample {number} id
+ * id = 1
+ *
+ * @apiSuccessExample  {json} Response-Example
+ * {
+ *   "name": "小王",
+ *   "email": "test@111"
+ * }
+ */
   @httpGet('/')
   private async index(@queryParam("id") id: number, @response() res: Koa.Response): Promise<any> {
     const data = this.indexService.getUser(id)
@@ -31,6 +45,17 @@ export default class IndexController implements interfaces.Controller {
       data
     }
   }
+  /**
+  * @api {Post} /add add
+  * @apiGroup User
+  * @apiParam {String} name 名称
+  * @apiParam {String} email 邮箱
+  * @apiParamExample {json} User
+  * {
+  *    "name":'123',
+  *    'email':'123@qweq.com'
+  * }
+  */
   @httpPost('add')
   private async add(@requestBody() user: Model.User,@response() res: Koa.Response) {
     try {
