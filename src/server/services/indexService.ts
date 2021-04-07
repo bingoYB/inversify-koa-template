@@ -12,9 +12,14 @@ export class IndexService implements IIndex {
     email: '2131231@qq.com',
     name: '小w'
   }];
+  
   getUser(id: number) {
     let result: Model.User
     result = this.userStorage[id]
     return result
+  }
+
+  addUser(user:Model.User):void  {
+    this.userStorage.push(user)
   }
 }
